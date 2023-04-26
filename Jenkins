@@ -1,0 +1,125 @@
+Installation:
+Terminal:
+	wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+	sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+	sudo apt update -y
+	sudo apt-get install jenkins -y
+	sudo systemctl start jenkins.service
+	sudo ufw enable
+	sudo ufw allow 8080
+
+On browser:
+	localhost:8080
+	
+Terminal:
+	sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+	57972404325041b3b252dda3b03fd473
+	
+On browser:
+	Click on Install suggested plugins
+	
+	Username: bskeshab
+	Password: w2k_pass@keshab
+	Full Name: Keshab RM
+	Email: bskeshab.cloudsewa@gmail.com
+	
+	Jenkins URL: http://localhost:8080/
+	
+*********************Jenkins Working**********************
+Creating Jobs:
+Terminal:
+	sudo apt install -y git
+	
+On browser:
+	Create New Items With Freestyle Project [i.e. Job01]
+		Right name
+		Select Freestyle Projectk
+		Click on OK
+	
+	Navigate SCM [Source Code Management]
+		Select Git
+		Add git repo
+		
+	Navigate Build Steps
+		Select Execute Shell
+	
+	Click on Save	
+	--------------------------------------------------------
+	Create New Items with Freestyle Project agian [i.e. Job02]
+		Right name
+		Select Freestyle Projectk
+		Click on OK
+			
+	Navigate SCM [Source Code Management]
+		Select Git
+		Add git repo
+		
+	Navigate Build Steps
+		Select Execute Shell
+		
+	Click on Save
+	--------------------------------------------------------
+	Create New Items with Freestyle Project agian [i.e. Job03]
+		Right name
+		Select Freestyle Projectk
+		Click on OK
+			
+	Navigate SCM [Source Code Management]
+		Select Git
+		Add git repo
+		
+	Navigate Build Steps
+		Select Execute Shell
+		
+	Click on Save
+	--------------------------------------------------------
+	After Creating 3 Jobs:
+	--------------------------------------------------------
+	Go to Job01
+		Click on Job01
+			Select Configure
+				Navigate Post-Build Action
+					Click on Add Post-Build Action
+						select build other project
+							Give project name [i.e. Job02,] for build after the job01 and click save
+	--------------------------------------------------------
+	Go to Job02
+		Click on Job01
+			Select Configure
+				Navigate Post-Build Action
+					Click on Add Post-Build Action
+						select build other project
+							Give project name [i.e. Job03,] for build after the job02 and click save
+*********************Jobs Created**********************
+Creating Pipeline:
+On Browser:
+	Navigate All
+		Click on + sign to adding pipeline
+			Give name for New Views [i.e. CI CD Pipeline]
+			Select Type as List View
+			Click on OK
+				Navigate Job Filters > Jobs
+					Tick mark on Job01
+					Click on OK
+				
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+
+
+	
