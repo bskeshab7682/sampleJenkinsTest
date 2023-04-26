@@ -33,6 +33,10 @@ On browser:
 Creating Jobs:
 Terminal:
 	sudo apt install -y git
+	git config --global user.name "bskeshab7682"
+        git config --global user.email bskeshab.cloudsewa@gmail.com
+	git config --list --show-origin
+	
 	
 On browser:
 	Create New Items With Freestyle Project [i.e. Job01]
